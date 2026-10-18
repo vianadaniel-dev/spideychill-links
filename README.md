@@ -1,6 +1,6 @@
 # 🕷️ Spideychill Linktree
 
-¡Bienvenido a mi página de enlaces personalizada inspirada en Spider-Man!
+¡Bienvenido a mi página de enlaces personal inspirada en el universo de Spider-Man! Creada con HTML y CSS puro.
 
 <p align="center">
   <a href="https://spideychill-links.vercel.app" target="_blank">
@@ -8,9 +8,12 @@
   </a>
 </p>
 
-## 🌐 Enlaces incluidos:
-- 💻 GitHub: [@spideychill777](https://github.com/spideychill777)
-- 📸 Instagram: [@spidey.chill](https://instagram.com/spidey.chill)
-- 🎬 TikTok: [@spidey.chill_](https://tiktok.com/@spidey.chill_)
-- 🐦 X (Twitter)
-- 💼 LinkedIn
+## 🌐 Enlaces oficiales:
+- 💻 **GitHub:** [@vianadaniel-dev](https://github.com/vianadaniel-dev)
+- 📸 **Instagram:** [@spidey.chill](https://instagram.com/spidey.chill)
+- 🎬 **TikTok:** [@spidey.chill_](https://tiktok.com/@spidey.chill_)
+- 🐦 **X (Twitter):** [@vianadanieldev](https://x.com/vianadanieldev)
+- 💼 **LinkedIn:** [vianadaniel-dev](https://www.linkedin.com/in/vianadaniel-dev/)
+
+---
+© 2026 Spideychill. All rights reserved.
