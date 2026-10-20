@@ -57,16 +57,26 @@
     Tu navegador no soporta audio.
 </audio>
 
-<!-- Botón flotante de música -->
-<button id="music-btn" class="music-float-btn" onclick="toggleMusic()" title="Reproducir / Pausar música">
-    <i id="music-icon" class="fa-solid fa-volume-xmark"></i>
-</button>
+<!-- Contenedor flotante de música y volumen -->
+<div class="music-control-container">
+    <!-- Botón de Play/Pause -->
+    <button id="music-btn" class="music-float-btn" onclick="toggleMusic()" title="Reproducir / Pausar">
+        <i id="music-icon" class="fa-solid fa-volume-xmark"></i>
+    </button>
+
+    <!-- Barra deslizante de volumen -->
+    <input type="range" id="volume-slider" class="volume-slider" min="0" max="1" step="0.05" value="0.5" onchange="setVolume(this.value)" oninput="setVolume(this.value)" title="Ajustar volumen">
+</div>
 
 <!-- Script para controlar la música -->
 <script>
     const music = document.getElementById('bg-music');
     const musicBtn = document.getElementById('music-btn');
     const musicIcon = document.getElementById('music-icon');
+    const volumeSlider = document.getElementById('volume-slider');
+
+    // Establecer un volumen inicial por defecto (ej. 40%)
+    music.volume = volumeSlider.value;
 
     function toggleMusic() {
         if (music.paused) {
@@ -77,6 +87,18 @@
             music.pause();
             musicIcon.classList.remove('fa-volume-high');
             musicIcon.classList.add('fa-volume-xmark');
+        }
+    }
+
+    function setVolume(value) {
+        music.volume = value;
+        // Cambiar el icono dinámicamente si el volumen baja a 0
+        if (value == 0) {
+            musicIcon.classList.remove('fa-volume-high', 'fa-volume-low');
+            musicIcon.classList.add('fa-volume-xmark');
+        } else {
+            musicIcon.classList.remove('fa-volume-xmark');
+            musicIcon.classList.add('fa-volume-high');
         }
     }
 </script>

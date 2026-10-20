@@ -114,37 +114,61 @@ body {
     transform: scale(1.2);
 }
 
-/* --- Botón Flotante de Música --- */
-.music-float-btn {
+
+/* --- Contenedor Flotante de Música --- */
+.music-control-container {
     position: fixed;
     bottom: 20px;
     right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     background-color: var(--card-bg);
-    color: var(--text-primary);
     border: 1px solid var(--border-color);
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
+    padding: 6px 12px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.music-control-container:hover {
+    border-color: var(--accent-red);
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+/* --- Botón de Música --- */
+.music-float-btn {
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    width: 35px;
+    height: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    transition: all 0.3s ease;
-    z-index: 1000;
-}
-
-.music-float-btn:hover {
-    border-color: var(--accent-red);
-    box-shadow: 0 0 15px var(--accent-glow);
-    transform: scale(1.1);
 }
 
 .music-float-btn i {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--accent-red);
+    transition: transform 0.3s ease;
 }
 
+.music-float-btn:hover i {
+    transform: scale(1.15);
+}
+
+/* --- Barra Deslizante de Volumen --- */
+.volume-slider {
+    width: 80px;
+    accent-color: var(--accent-red);
+    cursor: pointer;
+    height: 5px;
+    background: var(--border-color);
+    border-radius: 5px;
+}
 /* --- Footer --- */
 .footer {
     margin-top: 40px;
